@@ -13,7 +13,7 @@ npm install
 2. Start the dev server
 
 ```bash
-npm run dev
+npm start
 ```
 
 Then open the URL printed in the terminal (usually http://localhost:5173).
@@ -24,6 +24,21 @@ Then open the URL printed in the terminal (usually http://localhost:5173).
 npm run build
 npm run preview
 ```
+
+## Deploy to GitHub Pages
+
+This repo is configured to auto-deploy to GitHub Pages on every push to `main` using GitHub Actions.
+
+- Vite base path is set in `vite.config.js` to `/bettingapp/` (matches repo name)
+- Workflow file: `.github/workflows/deploy.yml`
+
+Steps:
+1. Push to `main` (or trigger manually via the Actions tab)
+2. In GitHub, go to Settings → Pages and ensure Source is set to "GitHub Actions"
+3. After the workflow finishes, your site will be available at:
+   - https://kbwoodall.github.io/bettingapp/
+
+If you fork/rename the repo, update the `base` in `vite.config.js` to `/<your-repo-name>/`.
 
 ## Logic
 - If odds > 0: winnings = dollars × odds / 100
