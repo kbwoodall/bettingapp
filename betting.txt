@@ -1,0 +1,2 @@
+ "create react.js and tailwind' betting screen component "input dollar and odds show winning result if odds > 0 multiply dollar by odds divided by 100 else divide dollar by odds divided by -100 round input boxes"
+ center screen with green background color and looks nice
